@@ -1,0 +1,35 @@
+<div ng-controller="AppCtrl as app">
+	<h1>Todos</h1>
+	<div ng-repeat="todo in app.todos">
+
+		<div class="col-md-8 col-sm-8 col-xs-8">
+			<p>{{todo.name}}</p>
+		</div>
+		<div class="col-md-2 col-sm-2 col-xs-2">
+			<a href="#/{{todo.id}}/{{todo.name}}">
+				<button class="btn btn-primary">
+					<span class="glyphicon glyphicon-pencil"></span>			
+				</button>
+			</a>
+		</div>
+		<div class="col-md-2 col-sm-2 col-xs-2">
+			<button class="btn btn-danger" ng-click="app.delTodo(todo)">
+				<span class="glyphicon glyphicon-remove"></span>			
+			</button>
+		</div>
+	</div>
+	<div class="col-md-12 col-sm-12 col-xs-12">
+		<hr>
+	</div>
+	<div class="col-md-12 col-sm-12 col-xs-12">
+		<form class="form-inline">
+			<input class="form-control" type="text" ng-model="app.todo.name">
+			<button class="form-control btn btn-success" ng-click="app.addTodo(app.todo)">
+				<span class="glyphicon glyphicon-plus"></span>			
+			</button>
+		</form>
+	</div>
+	<div class="col-md-12 col-sm-12 col-xs-12">
+		<br>
+	</div>
+</div>

@@ -1,0 +1,32 @@
+<div ng-controller="EditCtrl as app">
+	<br>
+	<p style="text-align: right">
+		<a href="/">
+			<span class="glyphicon glyphicon-remove" id="close"></span>
+		</a>
+	</p>
+	<h1>Edit todo</h1>
+	<br>
+	<h2 style="text-align: center;">
+		<small>Modify todo: </small>{{app.oldname}}
+		<small> to: </small>{{app.todo.name}}
+	</h2>
+	<br>
+	<div class="col-md-12 col-sm-12 col-xs-12">
+		<hr>
+	</div>
+	<div class="col-md-12 col-sm-12 col-xs-12">
+		<form class="form-inline">
+			<input class="form-control" type="text" ng-model="app.todo.name">
+			<a href="/">
+				<button class="form-control btn btn-primary" ng-click="app.editTodo(app.todo)">
+					<span class="glyphicon glyphicon-pencil"></span>
+				</button>
+			</a>
+		</form>
+	</div>
+	<div class="col-md-12 col-sm-12 col-xs-12">
+		<br>
+	</div>
+</div>
+
