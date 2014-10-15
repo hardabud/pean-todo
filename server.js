@@ -4,9 +4,6 @@ var bodyParser = require('body-parser');
 var todoCtrl = require('./controllers/todo');
 var app = express();
 
-app.set('views', './views');
-app.set('view engine', 'jade');
-
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json());
 
